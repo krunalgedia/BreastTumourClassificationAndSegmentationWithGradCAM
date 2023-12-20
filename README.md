@@ -30,6 +30,9 @@ The goal of this project is to develop a real-time web application to
 ```bash
 # Example installation command
 pip install -r requirements.txt
+
+# Run Web Application
+streamlit run app.py
 ```
 
 ## Data
@@ -49,7 +52,7 @@ The data collected at baseline include breast ultrasound images among women in a
 * utils and helper folders contain modules for app.py
 
 ## Results
-For the first task of image classification, we tried Transfer learning using popular CNN models like VGG19, ResNet, EfficientNet as well Vision models as Vision Transformer. Using average recall of Benign and Malignant tumors, we found EfficientNet to be the best-performing one on the test set. The models were implemented in tf-keras with callbacks implemented for overtraining.
+For the first task of image classification, we tried Transfer learning using popular CNN models like VGG19, ResNet, and EfficientNet as well as Vision models as Vision Transformer. Using average recall of Benign and Malignant tumors, we found EfficientNet to be the best-performing one on the test set. The models were implemented in tf-keras with callbacks implemented for overtraining.
 The following table gives the gist of the performance.
 
 | model           |   Precision_Normal |   Precision_Benign |   Precision_Malignant |   Recall_Normal |   Recall_Benign |   Recall_Malignant |   Recall_BM |
@@ -74,11 +77,15 @@ The web app gives the segmentation prediction using the EfficientNet model. Foll
 --- | --- | ---
 Benign Scan | Malignant Scan | Normal Scan
 
-For the third task, we used Grad-CAM which uses a Class activation map along with gradient information to give insights into the model. The final heatmap is overlaid on the input image as shown in the images above.
+For the third task, we used Grad-CAM which uses Class Activation Map along with gradient information to give insights into the model. The final heatmap is overlaid on the input image as shown in the web app for both classification and segmentation predictions.
 
-<img src="https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/difficult.gif" alt="Image" width="400"/>  
-Such Grad-CAM heatmaps can help in giving insights to the user about the model's focus in decision making. This can help in cases like the one shown on the left side where the segmentation prediction is not the best. However, looking at the GradCAM heatmap shows the areas the model focussed on and we see the focus included the region of the tumor but the model. Thus, even though the model fails here, such insights can help the doctor to still detect the probable areas of the tumour.
+<img src="https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/difficult.gif" alt="Image" width="400"/> Such Grad-CAM heatmaps can help greatly in giving insights to the user about the model's focus in decision-making. This can help in cases like the one shown on the left side where the segmentation prediction is not the best. However, looking at the GradCAM heatmap shows the areas the model focussed on and we see the focus included the region of the tumor but the model. Thus, even though the model fails here, such insights can help the doctor to detect the probable areas of the tumor.
 
+## Contact
+
+Feel free to reach out if you have any questions, suggestions, or feedback related to this project. I'd love to hear from you!
+
+- **LinkedIn:** [Krunal Gedia](https://www.linkedin.com/in/krunal-gedia-00188899/)
 
 ## References
 [1]: Al-Dhabyani W, Gomaa M, Khaled H, Fahmy A. Dataset of breast ultrasound images. Data in Brief. 2020 Feb;28:104863. DOI: 10.1016/j.dib.2019.104863
