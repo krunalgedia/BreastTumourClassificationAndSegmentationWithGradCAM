@@ -76,7 +76,9 @@ Benign Scan | Malignant Scan | Normal Scan
 
 For the third task, we used Grad-CAM which uses a Class activation map along with gradient information to give insights into the model. The final heatmap is overlaid on the input image as shown in the images above.
 
-<img src="image.jpg" alt="Image" width="300"/>
+<img src="https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/difficult.gif" alt="Image" width="300"/>
+
+
 
 
 
