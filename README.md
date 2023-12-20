@@ -81,6 +81,14 @@ For the third task, we used Grad-CAM which uses Class Activation Map along with 
 
 <img src="https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/difficult.gif" alt="Image" width="400"/> Such Grad-CAM heatmaps can help greatly in giving insights to the user about the model's focus in decision-making. This can help in cases like the one shown on the left side where the segmentation prediction is not the best. However, looking at the GradCAM heatmap shows the areas the model focussed on and we see the focus included the region of the tumor but the model. Thus, even though the model fails here, such insights can help the doctor to detect the probable areas of the tumor.
 
+## Dependencies
+
+This project uses the following dependencies:
+
+- **Python:** 3.10.12
+- **Tensorflow:** 2.15.0
+- **Streamlit:** 1.28.2 
+
 ## Contact
 
 Feel free to reach out if you have any questions, suggestions, or feedback related to this project. I'd love to hear from you!
