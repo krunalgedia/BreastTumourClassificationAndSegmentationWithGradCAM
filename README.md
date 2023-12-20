@@ -36,12 +36,12 @@ pip install -r requirements.txt
 The data collected at baseline include breast ultrasound images among women in ages between 25 and 75 years old. This data was collected in 2018. The number of patients is 600 female patients. The dataset consists of 780 images with an average image size of 500*500 pixels. The images are in PNG format. The ground truth images are presented with original images. The images are categorized into three classes, which are normal, benign, and malignant. [1]
 
 ## Workflow
-- Importing data
-- Observing data
-- Loading data in appropriate form.
-- Training different models and comparing metrics.
-- Running predictions on the model
-- Running Grad CAM insights on the final attention layer
+1. Importing data
+2. Observing data
+3. Loading data in appropriate form.
+4. Training different models and comparing metrics.
+5. Running predictions on the model
+6. Running Grad CAM insights on the final attention layer
 
 * bc.ipynb contains the end-to-end code for Image classification
 * bc.ipynb contains the end-to-end code for Semantic Segmentation.
