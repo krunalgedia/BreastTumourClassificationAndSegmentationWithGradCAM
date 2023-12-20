@@ -61,9 +61,22 @@ The following table gives the gist of the performance.
 | ConvNeXtBase    |               0.7  |               0.84 |                  0.7  |            0.78 |            0.8  |               0.73 |        0.76 |
 | vit_b16         |               0.27 |               0.75 |                  0.45 |            0.81 |            0.07 |               0.73 |        0.4  |
 
-![Image 1](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/benign.gif) | ![Image 2](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/benign.gif) | ![Image 3](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/benign.gif)
+The web app gives the prediction using the EfficientNet model. Following is the demo for each of the three classes:
+![Image 1](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/benign_detect.png) | ![Image 2](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/malignant_detect.png) | ![Image 3](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/normal_detect.png)
 --- | --- | ---
-Caption 1 | Caption 2 | Caption 3
+Benign Scan | Malignant Scan | Normal Scan
+
+
+For the second task of image semantic segmentation, we tried the current models used in the medical literature like UNet, ResUNet, ResUNet with Attention. Using dice score and Intersection over Union (IoU) as a metric, all the models performed similarly. We finally decided to go with ResUNet with Attention since it provided negligible gains in metrics over the other two models. The models were implemented in tf-keras.
+
+The web app gives the segmentation prediction using the EfficientNet model. Following is the demo for each of the three classes:
+![Image 1](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/benign.gif) | ![Image 2](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/malignant.gif) | ![Image 3](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/normal.gif)
+--- | --- | ---
+Benign Scan | Malignant Scan | Normal Scan
+
+For the third task, we used Grad-CAM which uses a Class activation map along with gradient information to give insights into the model. The final heatmap is overlaid on the input image as shown in the images above.
+
+<img src="image.jpg" alt="Image" width="300"/>
 
 
 
