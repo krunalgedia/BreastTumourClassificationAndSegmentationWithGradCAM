@@ -62,7 +62,7 @@ The following table gives the gist of the performance.
 | vit_b16         |               0.27 |               0.75 |                  0.45 |            0.81 |            0.07 |               0.73 |        0.4  |
 
 The web app gives the prediction using the EfficientNet model. Following is the demo for each of the three classes:
-![Image 1](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/benign_detect.png) | ![Image 2](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/malignant_detect.png) | ![Image 3](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/normal_detect.png)
+![Image 1](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/opening_page.png) | ![Image 2](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/malignant_detect.png) | ![Image 3](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/normal_detect.png)
 --- | --- | ---
 Benign Scan | Malignant Scan | Normal Scan
 
@@ -76,10 +76,7 @@ Benign Scan | Malignant Scan | Normal Scan
 
 For the third task, we used Grad-CAM which uses a Class activation map along with gradient information to give insights into the model. The final heatmap is overlaid on the input image as shown in the images above.
 
-<img src="https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/difficult.gif" alt="Image" width="300"/>
-
-
-
+<img src="https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/difficult.gif" alt="Image" width="400"/>  Such Grad-CAM heatmaps can help in giving insights to the user about the model's focus in decision making. This can help in cases like the one shown on the left side where the segmentation prediction is not the best. However, looking at the GradCAM heatmap shows the areas the model focussed on and we see the focus included the region of the tumor but the model. Thus, even though the model fails here, such insights can help the doctor to still detect the probable areas of the tumour.
 
 
 ## References
