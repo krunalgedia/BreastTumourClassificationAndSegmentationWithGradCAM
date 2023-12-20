@@ -46,8 +46,8 @@ The data collected at baseline include breast ultrasound images among women in a
 5. Running predictions on the model
 6. Running Grad CAM insights on the final attention layer
 
-* bc.ipynb contains the end-to-end code for Image classification
-* bc.ipynb contains the end-to-end code for Semantic Segmentation.
+* notebooks/classification_breast_cancer.ipynb contains the end-to-end code for Image classification
+* notebooks/segmentation_breast_cancer.ipynb contains the end-to-end code for Semantic Segmentation.
 * app.py contains the streamlit app code.
 * utils and helper folders contain modules for app.py
 
@@ -89,6 +89,9 @@ This project uses the following dependencies:
 - **Tensorflow:** 2.15.0
 - **Streamlit:** 1.28.2 
 
+- [Trained Classification model](https://www.dropbox.com/scl/fi/lnp23cdyo4eq0nckn2vtq/Detection_model?rlkey=ll5wy8fhw4mb9fopk83xdkbn0&dl=0)
+- [Trained Segmentation model](https://www.dropbox.com/scl/fi/cq1tescfxr1uvp8z8fb2g/Segmentation_model?rlkey=s81dvvzzdlj0q92kjxvno78vr&dl=0)
+  
 ## Contact
 
 Feel free to reach out if you have any questions, suggestions, or feedback related to this project. I'd love to hear from you!
