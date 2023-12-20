@@ -11,16 +11,17 @@ Breast cancer remains a significant global health challenge, with approximately 
 - [Workflow](#workflow)
 - [Results](#results)
 - [Dependencies](#dependencies)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
+- [References](#references)
 
 ## Project Overview
 
 [Provide a brief overview of your project, including its purpose, goals, and any relevant context.]
-The goal of this project is to provide a web application through which one could upload the MRI scan of a patient's breast to know if the breast has tumor cells, and if yes, which one among benign and malignant and show the confidence of the ML model in predicting the classes.
-Another goal is to perform instance segmentation on the MRI scan to know the location of the tumour cells if present.
-Both these predictions must be accompanied by GradCAM of the final (attention) layer to know where the focus of the model was while predicting the tumor cells.
+The goal of this project is to develop a real-time web application to
+* Perform classification of the uploaded Ultrasound scan of a patient's breast to know if the breast has benign or malignant tumor cells along with confidence in prediction. 
+* Perform semantic segmentation of the Ultrasound scan of a patient's breast to know the location of the tumor cells if present.
+* Provide additional insights for both classification and segmentation to know what the model focuses on while performing the prediction.
 
 ## Installation
 
@@ -29,4 +30,19 @@ Both these predictions must be accompanied by GradCAM of the final (attention) l
 ```bash
 # Example installation command
 pip install -r requirements.txt
+
+## Data
+The data collected at baseline include breast ultrasound images among women in ages between 25 and 75 years old. This data was collected in 2018. The number of patients is 600 female patients. The dataset consists of 780 images with an average image size of 500*500 pixels. The images are in PNG format. The ground truth images are presented with original images. The images are categorized into three classes, which are normal, benign, and malignant. [1]
+
+## Workflow
+- Importing data
+- Observing data
+- Loading data in appropriate form.
+- Training different models and comparing metrics.
+- Running predic
+
+
+## References
+[1]: Al-Dhabyani W, Gomaa M, Khaled H, Fahmy A. Dataset of breast ultrasound images. Data in Brief. 2020 Feb;28:104863. DOI: 10.1016/j.dib.2019.104863
+
 
