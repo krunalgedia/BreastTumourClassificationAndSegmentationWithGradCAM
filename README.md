@@ -49,6 +49,18 @@ The data collected at baseline include breast ultrasound images among women in a
 * utils and helper folders contain modules for app.py
 
 ## Results
+For the first task, we tried Transfer learning using popular CNN models like VGG19, ResNet, EfficientNet as well vision model as Vision Transformer.
+| model           |   Precision_Normal |   Precision_Benign |   Precision_Malignant |   Recall_Normal |   Recall_Benign |   Recall_Malignant |   Recall_BM |
+|:----------------|-------------------:|-------------------:|----------------------:|----------------:|----------------:|-------------------:|------------:|
+| EfficientNetB7  |               0.72 |               0.86 |                  0.82 |            0.85 |            0.83 |               0.78 |        0.81 |
+| ResNet152V2     |               0.71 |               0.89 |                  0.86 |            0.89 |            0.88 |               0.73 |        0.8  |
+| VGG19           |               0.74 |               0.86 |                  0.62 |            0.93 |            0.73 |               0.73 |        0.73 |
+| EfficientNetV2S |               0.53 |               0.85 |                  0.69 |            0.89 |            0.69 |               0.66 |        0.68 |
+| ConvNeXtBase    |               0.7  |               0.84 |                  0.7  |            0.78 |            0.8  |               0.73 |        0.76 |
+| vit_b16         |               0.27 |               0.75 |                  0.45 |            0.81 |            0.07 |               0.73 |        0.4  |
+| vit_b16         |               0.31 |               0.73 |                  0.62 |            0.81 |            0.4  |               0.56 |        0.48 |
+| vit_b16         |               0.47 |               0.76 |                  0.55 |            0.52 |            0.59 |               0.78 |        0.69 |
+| vit_b16         |               0.38 |               0.83 |                  0.52 |            0.74 |            0.39 |               0.78 |        0.58 |
 
 ![alt text](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/benign.gif)
 
