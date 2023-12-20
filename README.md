@@ -76,7 +76,8 @@ Benign Scan | Malignant Scan | Normal Scan
 
 For the third task, we used Grad-CAM which uses a Class activation map along with gradient information to give insights into the model. The final heatmap is overlaid on the input image as shown in the images above.
 
-<img src="https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/difficult.gif" alt="Image" width="400"/>  Such Grad-CAM heatmaps can help in giving insights to the user about the model's focus in decision making. This can help in cases like the one shown on the left side where the segmentation prediction is not the best. However, looking at the GradCAM heatmap shows the areas the model focussed on and we see the focus included the region of the tumor but the model. Thus, even though the model fails here, such insights can help the doctor to still detect the probable areas of the tumour.
+<img src="https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/difficult.gif" alt="Image" width="400"/>  
+Such Grad-CAM heatmaps can help in giving insights to the user about the model's focus in decision making. This can help in cases like the one shown on the left side where the segmentation prediction is not the best. However, looking at the GradCAM heatmap shows the areas the model focussed on and we see the focus included the region of the tumor but the model. Thus, even though the model fails here, such insights can help the doctor to still detect the probable areas of the tumour.
 
 
 ## References
