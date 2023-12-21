@@ -10,6 +10,7 @@ Breast cancer remains a significant global health challenge, with approximately 
 - [Data](#data)
 - [Workflow](#workflow)
 - [Results](#results)
+- [More ideas](#More ideas)
 - [Dependencies](#dependencies)
 - [License](#license)
 - [Contact](#contact)
@@ -70,7 +71,7 @@ The web app gives the prediction using the EfficientNet model. Following is the 
 Benign Scan | Malignant Scan | Normal Scan
 
 
-For the second task of image semantic segmentation, we tried the current models used in the medical literature like UNet, ResUNet, ResUNet with Attention. Using dice score and Intersection over Union (IoU) as a metric, all the models performed similarly. We finally decided to go with ResUNet with Attention since it provided negligible gains in metrics over the other two models. The models were implemented in tf-keras.
+For the second task of image semantic segmentation, we fine-tuned the pre-trained models used in the medical literature like UNet, ResUNet, ResUNet with Attention. Using dice score and Intersection over Union (IoU) as a metric, all the models were found to be performing similarly. We finally decided to go with ResUNet with Attention since it provided negligible gains in metrics over the other two models. The models were implemented in tf-keras.
 
 The web app gives the segmentation prediction using the EfficientNet model. Following is the demo for each of the three classes:
 ![Image 1](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/benign.gif) | ![Image 2](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/malignant.gif) | ![Image 3](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/normal.gif)
@@ -80,6 +81,12 @@ Benign Scan | Malignant Scan | Normal Scan
 For the third task, we used Grad-CAM which uses Class Activation Map along with gradient information to give insights into the model. The final heatmap is overlaid on the input image as shown in the web app for both classification and segmentation predictions.
 
 <img src="https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/difficult.gif" alt="Image" width="400"/> Such Grad-CAM heatmaps can help greatly in giving insights to the user about the model's focus in decision-making. This can help in cases like the one shown on the left side where the segmentation prediction is not the best. However, looking at the GradCAM heatmap shows the areas the model focussed on and we see the focus included the region of the tumor but the model. Thus, even though the model fails here, such insights can help the doctor to detect the probable areas of the tumor.
+
+## More ideas
+
+For the classification model, maybe cross combination or concatenating transformer vision model with CNN models could work even better since transformer models are known to capture the global picture while CNN models look more at the local picture. 
+
+For the segmentation model, maybe stacking of models could be tried.
 
 ## Dependencies
 
