@@ -10,7 +10,7 @@ Breast cancer remains a significant global health challenge, with approximately 
 - [Data](#data)
 - [Workflow](#workflow)
 - [Results](#results)
-- [More ideas](#More ideas)
+- [More ideas](#More-ideas)
 - [Dependencies](#dependencies)
 - [License](#license)
 - [Contact](#contact)
