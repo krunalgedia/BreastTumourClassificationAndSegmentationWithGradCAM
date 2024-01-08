@@ -1,4 +1,4 @@
-# BreastTumourClassificationAndSegmentationWithGradCAM
+# Breast Tumour Classification And Semantic Segmentation with Insights from GradCAM
 
 Breast cancer remains a significant global health challenge, with approximately 2.3 million new cases diagnosed each year, according to the World Health Organization (WHO). The impact is staggering, as breast cancer is the most common cancer among women worldwide, contributing to nearly 1 in 4 cancer cases in females. Tragically, it is responsible for over 685,000 deaths annually. In the United States alone, an estimated 1 in 8 women will develop invasive breast cancer during their lifetime. These statistics underscore the urgent need for effective treatments and, ultimately, a cure. Advancements in research and medical science are crucial in addressing this public health concern, improving survival rates, and enhancing the quality of life for millions of individuals affected by breast cancer.
 
@@ -6,13 +6,11 @@ Breast cancer remains a significant global health challenge, with approximately 
 
 - [Project Overview](#project-overview)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Data](#data)
 - [Workflow](#workflow)
 - [Results](#results)
 - [More ideas](#More-ideas)
 - [Dependencies](#dependencies)
-- [License](#license)
 - [Contact](#contact)
 - [References](#references)
 
@@ -53,7 +51,7 @@ The data collected at baseline include breast ultrasound images among women in a
 * utils and helper folders contain modules for app.py
 
 ## Results
-For the first task of image classification, we tried Transfer learning using popular CNN models like VGG19, ResNet, and EfficientNet as well as Vision models as Vision Transformer. Using average recall of Benign and Malignant tumors, we found EfficientNet to be the best-performing one on the test set. The models were implemented in tf-keras with callbacks implemented for overtraining.
+For the first task of image classification, we tried Transfer learning using popular CNN models like VGG19, ResNet, and EfficientNet as well as Transformer models like Vision Transformer. Using average recall of Benign and Malignant tumors, we found EfficientNet to be the best-performing one on the test set. Transformer models are known to require more data to beat SOTA models. The models were implemented in tf-keras with callbacks implemented for overtraining.
 The following table gives the gist of the performance.
 
 | model           |   Precision_Normal |   Precision_Benign |   Precision_Malignant |   Recall_Normal |   Recall_Benign |   Recall_Malignant |   Recall_BM |
@@ -63,7 +61,7 @@ The following table gives the gist of the performance.
 | VGG19           |               0.74 |               0.86 |                  0.62 |            0.93 |            0.73 |               0.73 |        0.73 |
 | EfficientNetV2S |               0.53 |               0.85 |                  0.69 |            0.89 |            0.69 |               0.66 |        0.68 |
 | ConvNeXtBase    |               0.7  |               0.84 |                  0.7  |            0.78 |            0.8  |               0.73 |        0.76 |
-| vit_b16         |               0.27 |               0.75 |                  0.45 |            0.81 |            0.07 |               0.73 |        0.4  |
+| VisionTransformer         |               0.27 |               0.75 |                  0.45 |            0.81 |            0.07 |               0.73 |        0.4  |
 
 The web app gives the prediction using the EfficientNet model. Following is the demo for each of the three classes:
 ![Image 1](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/opening_page.png) | ![Image 2](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/malignant_detect.png) | ![Image 3](https://github.com/krunalgedia/BreastTumourClassificationAndSegmentationWithGradCAM/blob/main/images_app/normal_detect.png)
@@ -84,7 +82,7 @@ For the third task, we used Grad-CAM which uses Class Activation Map along with 
 
 ## More ideas
 
-For the classification model, maybe cross combination or concatenating transformer vision model with CNN models could work even better since transformer models are known to capture the global picture while CNN models look more at the local picture. 
+For the classification model, maybe cross combination or concatenating transformer vision model with CNN models could work even better since transformer models are known to capture the global picture while CNN models look more at the local picture. Also, use text data like patient info can be further added to the model to create multi-modal framework for classification. 
 
 For the segmentation model, maybe stacking of models could be tried.
 
@@ -107,5 +105,6 @@ Feel free to reach out if you have any questions, suggestions, or feedback relat
 
 ## References
 [1]: Al-Dhabyani W, Gomaa M, Khaled H, Fahmy A. Dataset of breast ultrasound images. Data in Brief. 2020 Feb;28:104863. DOI: 10.1016/j.dib.2019.104863
-
+[2]: [U-NET](https://arxiv.org/abs/1505.04597)
+[3]: [EfficientNet](https://arxiv.org/abs/1905.11946)
 
